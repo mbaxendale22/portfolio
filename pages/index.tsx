@@ -8,9 +8,9 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div className='h-screen w-screen flex flex-col justify-center items-center font-Montserrat gap-24'>
-    <div>
+    <div className='flex flex-col border gap-4'>
       <h1 className="text-8xl">Matthew Baxendale</h1>
-      <h3 className='text-center'>Junior Full Stack Developer</h3>
+      <h3 className='text-center text-xl'>Junior Full Stack Developer</h3>
     </div>
       <div className='flex justify-evenly w-1/2 border text-xl'>
         <Link href="/about">
