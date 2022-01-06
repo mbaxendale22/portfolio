@@ -6,6 +6,17 @@
 @tailwind utilities;
 
 
+@layer components {
+  .animate-links {
+    @apply w-fit m-auto transform hover:text-green-600 hover:translate-y-2 hover:scale-110 hover:text-lg duration-300 ease-in-out
+  }
+  .rotate-burger {
+    @apply transform skew-y-6 duration-300 ease-in
+  }
+  .hide-nav {
+    @apply opacity-0 transform translate-y-0 duration-300 ease-in
+  }
+}
 
 html,
 body {
