@@ -33,7 +33,7 @@ const Nav: React.FC<Props> = ({ top, middle, bottom }) => {
           initial={{ opacity: 0, translateY: '0' }}
           animate={{ opacity: 1, translateY: '10px' }}
           transition={{ duration: 0.5 }}
-          className="absolute navbar top-12 left-5 h-1/2 w-12 md:w-14 shadow-lg bg-green-700 rounded-md flex flex-col justify-evenly items-center text-sm"
+          className="absolute navbar top-12 left-5 h-1/2 w-12 md:w-14 shadow-lg bg-gradient-to-tr from-green-200 to-green-600 rounded-md flex flex-col justify-evenly items-center text-sm"
         >
           <Link href={top.path}>
             <div className="rounded-lg bg-white h-[11%] w-2/3 flex justify-center items-center hover:scale-110 cursor-pointer shadow">
