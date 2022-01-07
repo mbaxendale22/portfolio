@@ -48,7 +48,7 @@ export const home = {
 };
 export const code = {
   icon: '/icons/code-solid.svg',
-  path: '/code'
+  path: '/projects'
 };
 export const contact = {
   icon: '/icons/envelope-open-regular.svg',
