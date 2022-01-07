@@ -37,7 +37,7 @@ const Card: React.FC<Props> = ({
       </div>
       <div className="px-6 pt-4 pb-2">
         <p className="text-lg font-bold pb-3">Key Tech</p>
-        <ul className="flex text-sm justify-evenly">
+        <ul className="flex text-xs md:text-sm justify-evenly">
           {tech.map((item, i) => {
             return <li key={i}>{item}</li>;
           })}
