@@ -1,64 +1,14 @@
-import React, { Children, MouseEventHandler, useEffect, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import Nav from '../components/Nav';
 import Link from 'next/link';
 import Image from 'next/image';
+import { home, code, contact } from '../helpers/propVariables';
 
 function About() {
-  const [toggleNav, setToggleNav] = useState(false);
-
-  const handleNavClick = (e: React.MouseEvent) => {
-    setToggleNav(!toggleNav);
-    const menu = document.querySelector('.menu') as HTMLDivElement;
-    const nodes = Array.from(menu.children);
-    nodes.forEach((child) => child.classList.toggle('rotate-burger'));
-  };
-
   return (
-    <div className="h-screen snap-y snap-proximity font-Montserrat overflow-x-hidden relative">
-      <div
-        className="absolute w-20 md:w-24 h-1/6 top-1 left-6 cursor-pointer menu"
-        onClick={handleNavClick}
-      >
-        <div className="w-1/2 h-[5px] bg-green-800 mt-2 mb-2 rounded-sm"></div>
-        <div className="w-1/2  h-[5px] bg-green-800 mt-2 mb-2 rounded-sm"></div>
-        <div className="w-1/2  h-[5px] bg-green-800 mt-2 mb-2 rounded-sm"></div>
-      </div>
-      {toggleNav && (
-        <motion.div
-          initial={{ opacity: 0, translateY: '0' }}
-          animate={{ opacity: 1, translateY: '10px' }}
-          transition={{ duration: 0.5 }}
-          className="absolute navbar top-12 left-5 h-1/2 w-12 md:w-14 shadow-lg bg-green-700 rounded-md flex flex-col justify-evenly items-center text-sm"
-        >
-          <Link href="/">
-            <div className="rounded-lg bg-white h-[15%] w-2/3 flex justify-center items-center hover:scale-110 cursor-pointer shadow">
-              <img
-                className="transform scale-75"
-                src="../home-solid.svg"
-                alt="link to homepage"
-              />
-            </div>
-          </Link>
-          <Link href="/projects">
-            <div className="rounded-lg bg-white h-[15%] w-2/3 flex justify-center items-center hover:scale-110 cursor-pointer shadow">
-              <img
-                className="transform scale-75"
-                src="../code-solid.svg"
-                alt="link to projects page"
-              />
-            </div>
-          </Link>
-          <Link href="/contact">
-            <div className="rounded-lg bg-white h-[15%] w-2/3 flex justify-center items-center hover:scale-110 cursor-pointer shadow">
-              <img
-                className="transform scale-75"
-                src="../envelope-open-regular.svg"
-                alt="link to contact"
-              />
-            </div>
-          </Link>
-        </motion.div>
-      )}
+    <div className="h-screen font-Montserrat overflow-x-hidden relative">
+      <Nav top={home} middle={code} bottom={contact} />
       <section className="h-screen flex flex-col justify-center items-center snap-start text-center gap-12 text-base sm:text-lg font-bold mx-14 md:mx-0">
         <h2 className="text-3xl">I'm Matthew Baxendale</h2>
         <p>I'm a junior full stack web developer</p>
@@ -79,8 +29,8 @@ function About() {
       <section className="h-screen w-screen flex justify-center items-center relative snap-start">
         <div className="absolute h-screen w-screen -z-10 opacity-30 overflow-y-hidden">
           <Image
-            alt="wall of coffee bags"
-            src="/../public/salzburg.jpg"
+            alt="salzburg landscape"
+            src="/backgrounds/salzburg.jpg"
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -143,7 +93,7 @@ function About() {
         <div className="absolute h-screen w-screen -z-10 opacity-30">
           <Image
             alt="wall of coffee bags"
-            src="/../public/coffee-wall.jpg"
+            src="/backgrounds/coffee-wall.jpg"
             layout="fill"
             objectFit="cover"
             quality={100}
@@ -172,8 +122,8 @@ function About() {
       <section className="h-screen w-screen flex justify-center items-center relative">
         <div className="absolute h-screen w-screen -z-10 opacity-30">
           <Image
-            alt="wall of coffee bags"
-            src="/../public/flowers.jpg"
+            alt="flowers"
+            src="/backgrounds/flowers.jpg"
             layout="fill"
             objectFit="cover"
             quality={100}

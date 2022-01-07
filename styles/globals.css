@@ -1,20 +1,18 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Mono&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 @layer components {
   .animate-links {
-    @apply w-fit m-auto transform hover:text-green-600 hover:translate-y-2 hover:scale-110 hover:text-lg duration-300 ease-in-out
+    @apply w-fit m-auto transform hover:text-green-600 hover:translate-y-2 hover:scale-110 hover:text-lg duration-300 ease-in-out cursor-pointer;
   }
   .rotate-burger {
-    @apply transform skew-y-6 duration-300 ease-in
+    @apply transform skew-y-6 duration-300 ease-in;
   }
   .hide-nav {
-    @apply opacity-0 transform translate-y-0 duration-300 ease-in
+    @apply opacity-0 transform translate-y-0 duration-300 ease-in;
   }
 }
 
@@ -34,5 +32,3 @@ a {
 * {
   box-sizing: border-box;
 }
-
-
