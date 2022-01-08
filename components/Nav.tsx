@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface Props {
-  top: { icon: string; path: string };
-  middle: { icon: string; path: string };
-  bottom: { icon: string; path: string };
+  top: { text: string; path: string };
+  middle: { text: string; path: string };
+  bottom: { text: string; path: string };
 }
 
 const Nav: React.FC<Props> = ({ top, middle, bottom }) => {
@@ -21,15 +21,41 @@ const Nav: React.FC<Props> = ({ top, middle, bottom }) => {
   return (
     <>
       <div
-        className="absolute w-20 md:w-24 h-1/6 top-1 left-6 cursor-pointer menu"
+        className="absolute w-20 md:w-24 h-1/6 top-1 left-12 cursor-pointer menu"
         onClick={handleNavClick}
       >
         <div className="w-1/2 h-[5px] bg-green-800 mt-2 mb-2 rounded-sm"></div>
         <div className="w-1/2 h-[5px] bg-green-800 mt-2 mb-2 rounded-sm"></div>
         <div className="w-1/2 h-[5px] bg-green-800 mt-2 mb-2 rounded-sm"></div>
       </div>
-      {toggleNav && (
-        <motion.div
+      <AnimatePresence>
+        {toggleNav && (
+          <motion.div
+            initial={{ opacity: 0, translateX: '-100vw' }}
+            animate={{ opacity: 1, translateX: '0px' }}
+            exit={{ translateX: '-100vw' }}
+            transition={{ duration: 1 }}
+            className="absolute navbar bg-white top-24 z-10 left-6 h-3/4 w-24 md:w-24 shadow-xl rounded-xl flex flex-col justify-evenly items-center text-sm font-Montserrat"
+          >
+            <Link href={top.path}>
+              <div className="rounded-lg bg-gray-50 p-2 w-2/3 flex justify-center items-center hover:scale-110 cursor-pointer shadow">
+                <p>{top.text}</p>
+              </div>
+            </Link>
+            <Link href={middle.path}>
+              <div className="rounded-lg bg-gray-50 p-2 w-2/3 flex justify-center items-center hover:scale-110 cursor-pointer shadow">
+                <p>{middle.text}</p>
+              </div>
+            </Link>
+            <Link href={bottom.path}>
+              <div className="rounded-lg bg-gray-50 p-2 w-2/3 flex justify-center items-center hover:scale-110 cursor-pointer shadow">
+                <p>{bottom.text}</p>
+              </div>
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
+      {/* <motion.div
           initial={{ opacity: 0, translateY: '0' }}
           animate={{ opacity: 1, translateY: '10px' }}
           transition={{ duration: 0.5 }}
@@ -63,7 +89,7 @@ const Nav: React.FC<Props> = ({ top, middle, bottom }) => {
             </div>
           </Link>
         </motion.div>
-      )}
+      )} */}
     </>
   );
 };

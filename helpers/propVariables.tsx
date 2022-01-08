@@ -43,19 +43,19 @@ export const mineSweeper = {
 // NAV BAR CONTENT
 
 export const home = {
-  icon: '/icons/home-solid.svg',
+  text: 'Home',
   path: '/'
 };
 export const code = {
-  icon: '/icons/code-solid.svg',
+  text: 'Projects',
   path: '/projects'
 };
 export const contact = {
-  icon: '/icons/envelope-open-regular.svg',
+  text: 'Contact',
   path: '/contact'
 };
 
 export const about = {
-  icon: '/icons/user-alt-solid.svg',
+  text: 'About',
   path: '/about'
 };
