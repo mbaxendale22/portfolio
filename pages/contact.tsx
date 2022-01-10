@@ -53,7 +53,6 @@ const Contact = () => {
     }
 
     setErrors({ ...tempErrors });
-    console.log('errors', errors);
     return isValid;
   };
 
@@ -62,7 +61,6 @@ const Contact = () => {
   ) => {
     const newData = { ...data, [e.currentTarget.name]: e.currentTarget.value };
     setData(newData);
-    console.log(data);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -78,9 +76,7 @@ const Contact = () => {
       method: 'POST'
     });
     const { error } = await res.json();
-    console.log(res);
     if (error) {
-      console.log(error);
       setShowSuccessMessage(false);
       setShowFailureMessage(true);
       setButtonText('Sorry');
