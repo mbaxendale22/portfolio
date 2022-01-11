@@ -3,13 +3,16 @@ import { motion } from 'framer-motion';
 import Nav from '../components/Nav';
 import Link from 'next/link';
 import { home, code, contact } from '../helpers/propVariables';
-import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
+import { BsArrowLeft, BsArrowRight, BsChevronDoubleUp } from 'react-icons/bs';
 
 function About() {
   return (
     <div className="h-screen font-Montserrat z-10 overflow-x-hidden relative">
       <Nav top={home} middle={code} bottom={contact} />
-      <section className="h-screen z-30 flex flex-col justify-center items-center snap-start text-center gap-12 text-base sm:text-lg font-bold mx-14 md:mx-0">
+      <section
+        id="pageTop"
+        className="h-screen z-30 flex flex-col justify-center items-center snap-start text-center gap-12 text-base sm:text-lg font-bold mx-14 md:mx-0"
+      >
         <h2 className="text-3xl">I'm Matthew Baxendale</h2>
         <p>I'm a junior full stack web developer.</p>
         <p>
@@ -108,17 +111,17 @@ function About() {
             Eventually I ran my own pop up coffee shop for a while called Kis
             Kávé, which means 'small coffee' in Hungarian.
           </p>
-          <div className=" hidden sm:flex border gap-4 transform translate-y-6">
+          <div className=" hidden sm:flex gap-4 transform translate-y-6">
             <p className=" text-xs md:text-sm">
               Wall of coffee in my popup coffee shop
             </p>
             <BsArrowRight className="transform scale-150" />
           </div>
         </motion.div>
-        <div className="border hidden sm:flex sm:w-1/2 bg-coffee bg-cover h-full"></div>
+        <div className="hidden sm:flex sm:w-1/2 bg-coffee bg-cover h-full"></div>
       </section>
       <section className="h-screen w-screen  flex justify-center items-center gap-2 p-6">
-        <div className="border hidden sm:flex sm:w-1/2 bg-leaf bg-cover h-full"></div>
+        <div className="hidden sm:flex sm:w-1/2 bg-leaf bg-cover h-full"></div>
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -143,7 +146,7 @@ function About() {
             I've played video games since I was a kid, I still enjoy it when I
             can find the time.
           </p>
-          <div className=" hidden sm:flex border gap-4 transform translate-y-6">
+          <div className=" hidden sm:flex gap-4 transform translate-y-6">
             <BsArrowLeft className="transform scale-150" />
             <p className=" text-xs md:text-sm">A rainy day in Loch Lomand</p>
           </div>
