@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Nav from '../components/Nav';
-import { home, about, code } from '../helpers/propVariables';
+import { home, about, code, skills } from '../helpers/propVariables';
 
 const Contact = () => {
   const [data, setData] = useState({
@@ -89,7 +89,7 @@ const Contact = () => {
 
   return (
     <div className="h-screen w-screen flex justify-center items-center bg-gray-50 relative font-Montserrat">
-      <Nav top={home} middle={code} bottom={about} />
+      <Nav top={home} middle1={code} middle2={skills} bottom={about} />
       <form
         onSubmit={handleSubmit}
         className="rounded-lg shadow-xl flex flex-col w-3/4 sm:w-1/2 px-4 py-8 bg-white"

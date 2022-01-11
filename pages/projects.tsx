@@ -7,6 +7,7 @@ import {
   home,
   about,
   contact,
+  skills,
   rickMortyVerse,
   mineSweeper,
   Kave
@@ -26,7 +27,7 @@ const projects = () => {
   return (
     <>
       <div className="h-screen w-screen relative">
-        <Nav top={home} middle={about} bottom={contact} />
+        <Nav top={home} middle1={about} middle2={skills} bottom={contact} />
         <h1 className="text-center font-Montserrat text-3xl pt-12">PROJECTS</h1>
         <div className="flex justify-evenly font-Montserrat text-xl">
           <div

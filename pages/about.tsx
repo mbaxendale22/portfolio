@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Nav from '../components/Nav';
 import Link from 'next/link';
-import { home, code, contact } from '../helpers/propVariables';
+import { home, code, contact, skills } from '../helpers/propVariables';
 import { BsArrowLeft, BsArrowRight, BsChevronDoubleUp } from 'react-icons/bs';
 
 function About() {
   return (
     <div className="h-screen font-Montserrat z-10 overflow-x-hidden relative">
-      <Nav top={home} middle={code} bottom={contact} />
+      <Nav top={home} middle1={code} middle2={skills} bottom={contact} />
       <section
         id="pageTop"
         className="h-screen z-30 flex flex-col justify-center items-center snap-start text-center gap-12 text-base sm:text-lg font-bold mx-14 md:mx-0"

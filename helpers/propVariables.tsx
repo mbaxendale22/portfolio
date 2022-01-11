@@ -68,3 +68,7 @@ export const about = {
   text: 'About',
   path: '/about'
 };
+export const skills = {
+  text: 'Skills',
+  path: '/skills'
+};

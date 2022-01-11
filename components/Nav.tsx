@@ -4,11 +4,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 interface Props {
   top: { text: string; path: string };
-  middle: { text: string; path: string };
+  middle1: { text: string; path: string };
+  middle2: { text: string; path: string };
   bottom: { text: string; path: string };
 }
 
-const Nav: React.FC<Props> = ({ top, middle, bottom }) => {
+const Nav: React.FC<Props> = ({ top, middle1, middle2, bottom }) => {
   const [toggleNav, setToggleNav] = useState<boolean>(false);
 
   const handleNavClick = (e: React.MouseEvent) => {
@@ -42,9 +43,14 @@ const Nav: React.FC<Props> = ({ top, middle, bottom }) => {
                 <p>{top.text}</p>
               </div>
             </Link>
-            <Link href={middle.path}>
+            <Link href={middle1.path}>
               <div className="rounded-lg bg-gray-50 p-2 w-2/3 flex justify-center items-center hover:scale-110 cursor-pointer shadow">
-                <p>{middle.text}</p>
+                <p>{middle1.text}</p>
+              </div>
+            </Link>
+            <Link href={middle2.path}>
+              <div className="rounded-lg bg-gray-50 p-2 w-2/3 flex justify-center items-center hover:scale-110 cursor-pointer shadow">
+                <p>{middle2.text}</p>
               </div>
             </Link>
             <Link href={bottom.path}>
