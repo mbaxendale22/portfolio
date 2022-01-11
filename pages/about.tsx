@@ -4,6 +4,7 @@ import Nav from '../components/Nav';
 import Link from 'next/link';
 import Image from 'next/image';
 import { home, code, contact } from '../helpers/propVariables';
+import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
 function About() {
   return (
@@ -20,22 +21,14 @@ function About() {
           I learnt to develop in Javascript & Python and built full stack{' '}
           <div className="animate-links">
             <Link href="/projects">
-              <a>PROJECTS</a>
+              <a>APPLICATIONS</a>
             </Link>
           </div>
         </p>
         <p className="text-2xl pt-12">But what else have I done?</p>
       </section>
-      <section className="h-screen w-screen flex justify-center items-center relative snap-start">
-        <div className="absolute h-screen w-screen -z-10 opacity-30 overflow-y-hidden">
-          <Image
-            alt="salzburg landscape"
-            src="/backgrounds/salzburg.jpg"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-        </div>
+      <section className="h-screen w-screen flex justify-center items-center gap-2 p-6">
+        <div className="border hidden sm:flex sm:w-1/2 bg-salzburg bg-cover h-full"></div>
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -45,7 +38,7 @@ function About() {
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0.1 }
           }}
-          className="flex flex-col items-center justify-center text-center gap-12 h-full w-4/5 sm:w-3/4 text-base sm:text-lg snap-start"
+          className="flex flex-col items-center justify-center text-center gap-12 h-full w-1/2 sm:w-1/2 text-base md:text-lg"
         >
           <h2 className="text-3xl">I Studied</h2>
           <p>
@@ -87,18 +80,16 @@ function About() {
               </a>
             </div>
           </div>
+          <div className=" hidden sm:flex gap-4 transform translate-y-6">
+            <BsArrowLeft className="transform scale-150" />
+            <p className=" text-xs md:text-sm">
+              View from my apartment window in Salzburg where I spend a year as
+              a visiting researcher
+            </p>
+          </div>
         </motion.div>
       </section>
-      <section className="h-screen w-screen flex justify-center items-center relative">
-        <div className="absolute h-screen w-screen -z-10 opacity-30">
-          <Image
-            alt="wall of coffee bags"
-            src="/backgrounds/coffee-wall.jpg"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-        </div>
+      <section className="h-screen w-screen flex justify-center items-center gap-2 p-6">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -108,7 +99,7 @@ function About() {
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0.1 }
           }}
-          className="flex flex-col items-center justify-center text-center gap-12 h-full w-3/4 text-base sm:text-lg snap-start"
+          className="flex flex-col items-center justify-center text-center gap-12 h-full w-1/2 sm:w-1/2 text-base md:text-lg"
         >
           <h2 className="text-3xl">I SLUNG SOME 'SPRO</h2>
           <p>I worked in an industry I'm passionate about: coffee</p>
@@ -117,18 +108,17 @@ function About() {
             Eventually I ran my own pop up coffee shop for a while called Kis
             Kávé, which means 'small coffee' in Hungarian
           </p>
+          <div className=" hidden sm:flex border gap-4 transform translate-y-6">
+            <p className=" text-xs md:text-sm">
+              Wall of coffee in my popup coffee shop
+            </p>
+            <BsArrowRight className="transform scale-150" />
+          </div>
         </motion.div>
+        <div className="border hidden sm:flex sm:w-1/2 bg-coffee bg-cover h-full"></div>
       </section>
-      <section className="h-screen w-screen flex justify-center items-center relative">
-        <div className="absolute h-screen w-screen -z-10 opacity-30">
-          <Image
-            alt="flowers"
-            src="/backgrounds/flowers.jpg"
-            layout="fill"
-            objectFit="cover"
-            quality={100}
-          />
-        </div>
+      <section className="h-screen w-screen  flex justify-center items-center gap-2 p-6">
+        <div className="border hidden sm:flex sm:w-1/2 bg-leaf bg-cover h-full"></div>
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -138,7 +128,7 @@ function About() {
             visible: { opacity: 1, scale: 1 },
             hidden: { opacity: 0, scale: 0.1 }
           }}
-          className="flex flex-col items-center justify-center text-center gap-12 h-full w-3/4 snap-start text-base sm:text-lg "
+          className="flex flex-col items-center justify-center text-center gap-12 h-full w-1/2 sm:w-1/2 text-base md:text-lg"
         >
           <h2 className="text-3xl">WHAT ELSE?</h2>
           <p>
@@ -147,12 +137,16 @@ function About() {
           </p>
           <p>
             I have Rhodesian Ridgeback called Aya who loves to explore forests,
-            countryside, and (small) mountains.
+            countryside, and small mountains.
           </p>
           <p>
             I've played video games since I was a kid, I still enjoy it when I
             can find the time
           </p>
+          <div className=" hidden sm:flex border gap-4 transform translate-y-6">
+            <BsArrowLeft className="transform scale-150" />
+            <p className=" text-xs md:text-sm">A rainy day in Loch Lomand</p>
+          </div>
         </motion.div>
       </section>
     </div>

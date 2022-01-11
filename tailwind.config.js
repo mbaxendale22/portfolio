@@ -8,6 +8,11 @@ module.exports = {
       fontFamily: {
         Montserrat: ['Montserrat', 'sans-serif'],
         Roboto: ['Roboto Mono', 'monospace']
+      },
+      backgroundImage: {
+        salzburg: "url('/backgrounds/salzburg.jpg')",
+        coffee: "url('/backgrounds/coffee-wall.jpg')",
+        leaf: "url('/backgrounds/leaf.jpeg')"
       }
     }
   },
