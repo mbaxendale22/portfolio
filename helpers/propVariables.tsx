@@ -39,6 +39,15 @@ export const mineSweeper = {
   site: 'https://mbaxendale22.github.io/SEI-Project-1/',
   tech: ['HTML', 'CSS', 'Vanilla Javascript']
 };
+export const Kave = {
+  image: '/projects/kave.png',
+  title: 'Kave.io',
+  description:
+    'A full stack web app being built as a side project. The purpose of Kave.io is to allow users to search for coffees from local roasters based on the characteristics of the coffees themselves, rather than the branding of the roasters. Users can also curate a list of coffees they have tried, adding notes and recipe details',
+  readme: 'https://github.com/mbaxendale22/kave-io-atlas',
+  site: 'https://github.com/mbaxendale22/kave-io-atlas',
+  tech: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB']
+};
 
 // NAV BAR CONTENT
 

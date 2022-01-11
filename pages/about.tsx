@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Nav from '../components/Nav';
 import Link from 'next/link';
@@ -11,13 +11,14 @@ function About() {
       <Nav top={home} middle={code} bottom={contact} />
       <section className="h-screen z-30 flex flex-col justify-center items-center snap-start text-center gap-12 text-base sm:text-lg font-bold mx-14 md:mx-0">
         <h2 className="text-3xl">I'm Matthew Baxendale</h2>
-        <p>I'm a junior full stack web developer</p>
+        <p>I'm a junior full stack web developer.</p>
         <p>
-          I learnt to code General Assembly's Software Enginner Immersive
-          Bootcamp
+          I learnt to code at General Assembly's Software Enginner Immersive
+          Bootcamp.
         </p>
         <p>
-          I learnt to develop in Javascript & Python and built full stack{' '}
+          I learnt to develop in Javascript (React/Node) & Python (React/Django)
+          and built full stack{' '}
           <div className="animate-links">
             <Link href="/projects">
               <a>APPLICATIONS</a>
@@ -50,14 +51,14 @@ function About() {
             >
               CEU
             </a>
-            , Budapest/Vienna
+            , Budapest/Vienna,
           </p>
           <p>
             I worked on the study of Complex Systems in philosophy & the life
-            sciences
+            sciences.
           </p>
-          <p>I spoke at conferences across Europe and in the US</p>
-          <div>Some of my work was published, you can check it out</div>
+          <p>I spoke at conferences across Europe and in the US.</p>
+          <div>Some of my work was published, you can check it out.</div>
           <div className="flex w-3/4">
             <div className="animate-links">
               <a
@@ -82,7 +83,7 @@ function About() {
           <div className=" hidden sm:flex gap-4 transform translate-y-6">
             <BsArrowLeft className="transform scale-150" />
             <p className=" text-xs md:text-sm">
-              View from my apartment window in Salzburg where I spend a year as
+              View from my apartment window in Salzburg where I spent a year as
               a visiting researcher
             </p>
           </div>
@@ -101,11 +102,11 @@ function About() {
           className="flex flex-col items-center justify-center text-center gap-12 h-full w-1/2 sm:w-1/2 text-base md:text-lg"
         >
           <h2 className="text-3xl">I SLUNG SOME 'SPRO</h2>
-          <p>I worked in an industry I'm passionate about: coffee</p>
-          <p>I began as a barista and moved up to managerial positions</p>
+          <p>I worked in an industry I'm passionate about: coffee.</p>
+          <p>I began as a barista and moved up to managerial positions.</p>
           <p>
             Eventually I ran my own pop up coffee shop for a while called Kis
-            Kávé, which means 'small coffee' in Hungarian
+            Kávé, which means 'small coffee' in Hungarian.
           </p>
           <div className=" hidden sm:flex border gap-4 transform translate-y-6">
             <p className=" text-xs md:text-sm">
@@ -132,7 +133,7 @@ function About() {
           <h2 className="text-3xl">WHAT ELSE?</h2>
           <p>
             I like to run. I got into it when working on my masters and rely on
-            it for mental & physical wellbeing
+            it for mental & physical wellbeing.
           </p>
           <p>
             I have Rhodesian Ridgeback called Aya who loves to explore forests,
@@ -140,7 +141,7 @@ function About() {
           </p>
           <p>
             I've played video games since I was a kid, I still enjoy it when I
-            can find the time
+            can find the time.
           </p>
           <div className=" hidden sm:flex border gap-4 transform translate-y-6">
             <BsArrowLeft className="transform scale-150" />
