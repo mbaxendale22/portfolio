@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Nav from '../components/Nav';
 import Link from 'next/link';
-import Image from 'next/image';
 import { home, code, contact } from '../helpers/propVariables';
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 
