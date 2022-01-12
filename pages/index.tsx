@@ -34,8 +34,8 @@ export default function Home() {
         </div>
       </div>
       <div className='flex justify-evenly w-1/2'>
-        <a target="blank" rel="noopener noreferrer" href='https://github.com/mbaxendale22'><BsGithub className='text-3xl' /></a>
-        <a target="blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/matthew-baxendale/'><BsLinkedin className='text-3xl' /></a>
+        <a target="blank" rel="noopener noreferrer" href='https://github.com/mbaxendale22'><BsGithub className='text-3xl transform hover:scale-125' /></a>
+        <a target="blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/matthew-baxendale/'><BsLinkedin className='text-3xl transform hover:scale-125' /></a>
       </div>
     </div>
   );
