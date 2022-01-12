@@ -146,6 +146,13 @@ const skills = () => {
                   I've been leveraging my JavaScript & React skills to dip into
                   developing on the Blockchain, picking up a small amount of
                   Rust along the way & using the Anchor framework.
+              
+               
+                  See The Rick and Mortyverse on the{' '}
+                  <span className="hover:text-green-700">
+                    <Link href="/projects">PROJECTS</Link>
+                  </span>{' '}
+                  page for an example.
                 </p>
               </div>
             )}
