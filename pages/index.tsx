@@ -23,7 +23,7 @@ export default function Home() {
           </Link>
         </div>
         <div className="animate-links">
-          <Link href="/projects">
+          <Link href="/skills">
             <a>Skills</a>
           </Link>
         </div>
