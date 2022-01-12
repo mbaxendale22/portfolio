@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Head from 'next/head';
 import Nav from '../components/Nav';
 import { home, about, code, skills } from '../helpers/propVariables';
 
@@ -88,76 +89,83 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen w-screen flex justify-center items-center bg-gray-50 relative font-Montserrat">
-      <Nav top={home} middle1={code} middle2={skills} bottom={about} />
-      <form
-        onSubmit={handleSubmit}
-        className="rounded-lg shadow-xl flex flex-col w-3/4 sm:w-1/2 px-4 py-8 bg-white"
-      >
-        <h1 className="text-2xl font-bold">Get in touch</h1>
-        <label htmlFor="fullname" className="mt-8">
-          Full name<span className="text-red-500">*</span>
-        </label>
-        <input
-          onChange={handleChange}
-          type="text"
-          name="fullname"
-          className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
-        />
-        {errors.fullname && (
-          <p className="text-red-500">Fullname is required</p>
-        )}
+    <>
+      <Head>
+        <title>Contact | MB</title>
+      </Head>
+      <div className="h-screen w-screen flex justify-center items-center bg-gray-50 relative font-Montserrat">
+        <Nav top={home} middle1={code} middle2={skills} bottom={about} />
+        <form
+          onSubmit={handleSubmit}
+          className="rounded-lg shadow-xl flex flex-col w-3/4 sm:w-1/2 px-4 py-8 bg-white"
+        >
+          <h1 className="text-2xl font-bold">Get in touch</h1>
+          <label htmlFor="fullname" className="mt-8">
+            Full name<span className="text-red-500">*</span>
+          </label>
+          <input
+            onChange={handleChange}
+            type="text"
+            name="fullname"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+          />
+          {errors.fullname && (
+            <p className="text-red-500">Fullname is required</p>
+          )}
 
-        <label htmlFor="email" className="mt-4">
-          E-mail<span className="text-red-500">*</span>
-        </label>
-        <input
-          onChange={handleChange}
-          type="email"
-          name="email"
-          className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
-        />
-        {errors.email && <p className="text-red-500">Email is required</p>}
+          <label htmlFor="email" className="mt-4">
+            E-mail<span className="text-red-500">*</span>
+          </label>
+          <input
+            onChange={handleChange}
+            type="email"
+            name="email"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+          />
+          {errors.email && <p className="text-red-500">Email is required</p>}
 
-        <label htmlFor="subject" className="mt-4">
-          Subject<span className="text-red-500">*</span>
-        </label>
-        <input
-          onChange={handleChange}
-          type="text"
-          name="subject"
-          className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
-        />
-        {errors.subject && <p className="text-red-500">Subject is required</p>}
+          <label htmlFor="subject" className="mt-4">
+            Subject<span className="text-red-500">*</span>
+          </label>
+          <input
+            onChange={handleChange}
+            type="text"
+            name="subject"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500"
+          />
+          {errors.subject && (
+            <p className="text-red-500">Subject is required</p>
+          )}
 
-        <label htmlFor="message" className=" mt-4">
-          Message<span className="text-red-500">*</span>
-        </label>
-        <textarea
-          onChange={handleChange}
-          name="message"
-          className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
-        ></textarea>
-        {errors.message && (
-          <p className="text-red-500">A Message is required</p>
-        )}
-        <div className="flex flex-row items-center justify-start m-auto">
-          <button className="px-10 mt-8 py-2 bg-green-600 text-white rounded-md text-lg flex flex-row items-center">
-            {buttonText}
-          </button>
-        </div>
-        {showSuccessMessage && (
-          <p className="text-green-700 mt-4 text-center">
-            Thanks for getting in touch
-          </p>
-        )}
-        {showFailureMessage && (
-          <p className="text-red-700 mt-4 text-center">
-            Something went wrong. Please try again.
-          </p>
-        )}
-      </form>
-    </div>
+          <label htmlFor="message" className=" mt-4">
+            Message<span className="text-red-500">*</span>
+          </label>
+          <textarea
+            onChange={handleChange}
+            name="message"
+            className="bg-transparent border-b py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500"
+          ></textarea>
+          {errors.message && (
+            <p className="text-red-500">A Message is required</p>
+          )}
+          <div className="flex flex-row items-center justify-start m-auto">
+            <button className="px-10 mt-8 py-2 bg-green-600 text-white rounded-md text-lg flex flex-row items-center">
+              {buttonText}
+            </button>
+          </div>
+          {showSuccessMessage && (
+            <p className="text-green-700 mt-4 text-center">
+              Thanks for getting in touch
+            </p>
+          )}
+          {showFailureMessage && (
+            <p className="text-red-700 mt-4 text-center">
+              Something went wrong. Please try again.
+            </p>
+          )}
+        </form>
+      </div>
+    </>
   );
 };
 

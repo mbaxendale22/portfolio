@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Card from '../components/Card';
 import Nav from '../components/Nav';
+import Head from 'next/head';
 import {
   household,
   londonParks,
@@ -26,6 +27,10 @@ const projects = () => {
 
   return (
     <>
+     <Head>
+       <title>Projects | MB</title>
+       <meta name='description' content='full stack javascript and python applications' />
+    </Head>
       <div className="h-screen w-screen relative">
         <Nav top={home} middle1={about} middle2={skills} bottom={contact} />
         <h1 className="text-center font-Montserrat text-3xl pt-12">PROJECTS</h1>
