@@ -11,7 +11,8 @@ import {
   skills,
   rickMortyVerse,
   mineSweeper,
-  Kave
+  Kave,
+  poddy
 } from '../helpers/propVariables';
 
 const projects = () => {
@@ -29,7 +30,7 @@ const projects = () => {
     <>
      <Head>
        <title>Projects | MB</title>
-       <meta name='description' content='full stack javascript and python applications' />
+       <meta name='description' content='full stack javascript and python application' />
     </Head>
       <div className="h-screen w-screen relative">
         <Nav top={home} middle1={about} middle2={skills} bottom={contact} />
@@ -52,7 +53,7 @@ const projects = () => {
         </div>
         {!toggle ? (
           <>
-            <div className="md:hidden h-screen flex justify-center items-center mx-2 ">
+            <div className="md:hidden flex justify-center items-center mx-2 mt-12 mb-8 ">
               <Card content={household} />
             </div>
             <div className="md:hidden h-screen flex justify-center items-center mx-2">
@@ -68,6 +69,9 @@ const projects = () => {
             <div className="md:hidden h-screen flex justify-center items-center mx-2 mt-8">
               <Card content={rickMortyVerse} />
             </div>
+            <div className="md:hidden h-screen flex justify-center items-center mx-2 mt-8">
+              <Card content={poddy} />
+            </div>
 
             <div className="md:hidden h-screen flex justify-center items-center mx-2 mb-4 mt-16">
               <Card content={mineSweeper} />
@@ -75,12 +79,17 @@ const projects = () => {
             <div className=" hidden md:h-screen md:w-screen md:flex md:justify-center md:items-center">
               <div className="flex justify-evenly items-center w-full h-3/4">
                 <Card content={rickMortyVerse} />
+                <Card content={poddy} />
+              </div>
+            </div>
+            <div className=" hidden md:h-screen md:w-screen md:flex md:justify-center md:items-center">
+              <div className="flex justify-evenly items-center w-full h-3/4">
                 <Card content={mineSweeper} />
               </div>
             </div>
           </>
         ) : (
-          <div className="h-screen flex justify-center items-center mx-2 ">
+          <div className="flex justify-center items-center mx-2 mt-12 md:mt-20">
             <Card content={Kave} />
           </div>
         )}

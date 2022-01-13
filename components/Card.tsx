@@ -15,7 +15,7 @@ const Card: React.FC<Props> = ({
   content: { image, title, description, readme, site, tech }
 }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg font-Montserrat">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg font-Montserrat h-[85%] mx-4 md:mx-0 md:h-full">
       <div className="w-full h-1/3">
         <img className="w-full h-full object-cover" src={image}></img>
       </div>
