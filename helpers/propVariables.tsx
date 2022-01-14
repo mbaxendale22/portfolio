@@ -52,7 +52,7 @@ export const poddy = {
   image: '/projects/poddy-lp.png',
   title: 'Poddy',
   description:
-    'A podcast recommendation app built using React and Listen Notes Podcast API. The app allows users to search for podcasts by genere, through filters, or be given a random podcasts. Information is available for each podcast and users receive further recommendations via a show similar podcasts feature',
+    'A pair-coded podcast recommendation app built in 48 hours using React and Listen Notes Podcast API. The app allows users to search for podcasts by genre, through filters, or be given a random podcast. Information is available for each podcast and users receive further recommendations via a show similar podcasts feature',
   readme: 'https://github.com/mbaxendale22/SEI-Project-2/blob/main/readme.md',
   site: 'https://frosty-shaw-45771e.netlify.app/',
   tech: ['JavaScript', 'React', 'Bulma', 'Axios']
