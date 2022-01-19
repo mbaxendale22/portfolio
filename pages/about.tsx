@@ -59,7 +59,7 @@ function About() {
               >
                 CEU
               </a>
-              , Budapest/Vienna,
+              , Budapest/Vienna.
             </p>
             <p>
               I worked on the study of Complex Systems in philosophy & the life
@@ -144,7 +144,7 @@ function About() {
               on it for mental & physical wellbeing.
             </p>
             <p>
-              I have Rhodesian Ridgeback called Aya who loves to explore
+              I have a Rhodesian Ridgeback called Aya who loves to explore
               forests, countryside, and small mountains.
             </p>
             <p>
