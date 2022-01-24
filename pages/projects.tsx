@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Card from '../components/Card';
 import Nav from '../components/Nav';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import {
   household,
   londonParks,
@@ -28,10 +29,13 @@ const projects = () => {
 
   return (
     <>
-     <Head>
-       <title>Projects | MB</title>
-       <meta name='description' content='full stack javascript and python application' />
-    </Head>
+      <Head>
+        <title>Projects | MB</title>
+        <meta
+          name="description"
+          content="full stack javascript and python application"
+        />
+      </Head>
       <div className="h-screen w-screen relative">
         <Nav top={home} middle1={about} middle2={skills} bottom={contact} />
         <h1 className="text-center font-Montserrat text-3xl pt-12">PROJECTS</h1>
@@ -53,10 +57,15 @@ const projects = () => {
         </div>
         {!toggle ? (
           <>
-            <div className="md:hidden flex justify-center items-center mx-2 mt-12 mb-8 ">
+            <div
+            
+              className="md:hidden flex justify-center items-center mx-2 mt-12 mb-8 "
+            >
               <Card content={household} />
             </div>
-            <div className="md:hidden h-screen flex justify-center items-center mx-2">
+            <div
+           
+             className="md:hidden h-screen flex justify-center items-center mx-2">
               <Card content={londonParks} />
             </div>
 

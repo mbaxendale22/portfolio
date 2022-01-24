@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion'
 
 interface Props {
   content: {
@@ -8,14 +9,19 @@ interface Props {
     readme: string;
     site: string;
     tech: string[];
+    direction: string
   };
 }
 
 const Card: React.FC<Props> = ({
-  content: { image, title, description, readme, site, tech }
+  content: { image, title, description, readme, site, tech, direction }
 }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg font-Montserrat h-[85%] mx-4 md:mx-0 md:h-full">
+    <motion.div
+    initial={{ opacity: 0, x: direction }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 1 }}
+    className="max-w-sm rounded overflow-hidden shadow-lg font-Montserrat h-[85%] mx-4 md:mx-0 md:h-full">
       <div className="w-full h-1/3">
         <img className="w-full h-full object-cover" src={image}></img>
       </div>
@@ -43,7 +49,7 @@ const Card: React.FC<Props> = ({
           })}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -14,7 +14,10 @@ function About() {
       </Head>
       <div className="h-screen font-Montserrat z-10 overflow-x-hidden relative">
         <Nav top={home} middle1={code} middle2={skills} bottom={contact} />
-        <section
+        <motion.section
+        initial={{opacity: 0, x: -200}}
+        animate={{opacity: 1, x: 0}}
+        transition={{ duration: 1 }}
           id="pageTop"
           className="h-screen z-30 flex flex-col justify-center items-center snap-start text-center gap-12 text-base sm:text-lg font-bold mx-14 md:mx-0"
         >
@@ -34,17 +37,17 @@ function About() {
             </div>
           </p>
           <p className="text-2xl pt-12">But what else have I done?</p>
-        </section>
+        </motion.section>
         <section className="h-screen w-screen flex justify-center items-center gap-2 p-6">
           <div className="border hidden sm:flex sm:w-1/2 bg-salzburg bg-cover h-full"></div>
           <motion.div
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             variants={{
-              visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0.1 }
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 100 }
             }}
             className="flex flex-col items-center justify-center text-center gap-12 h-full w-1/2 sm:w-1/2 text-base md:text-lg"
           >
@@ -102,10 +105,10 @@ function About() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             variants={{
-              visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0.1 }
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 100 }
             }}
             className="flex flex-col items-center justify-center text-center gap-12 h-full w-1/2 sm:w-1/2 text-base md:text-lg"
           >
@@ -131,10 +134,10 @@ function About() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 1 }}
             variants={{
-              visible: { opacity: 1, scale: 1 },
-              hidden: { opacity: 0, scale: 0.1 }
+              visible: { opacity: 1, y: 0 },
+              hidden: { opacity: 0, y: 100 }
             }}
             className="flex flex-col items-center justify-center text-center gap-12 h-full w-1/2 sm:w-1/2 text-base md:text-lg"
           >

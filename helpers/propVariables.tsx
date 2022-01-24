@@ -7,7 +7,8 @@ export const household = {
     'Household is a financial management app in which a user can track their income, expenses, and savings. The user is also able to create a household with other users. The app will handle the distribution of household expenses among members proportionately and keep track via a household dashboard. Both individual user and household data are represented with charts and key insights are available on demand.',
   readme: 'https://github.com/mbaxendale22/SEI-Project-4/blob/main/README.md',
   site: 'https://household-app-project.herokuapp.com/',
-  tech: ['JavaScript', 'Python', 'React', 'Django', 'PostgreSQL']
+  tech: ['JavaScript', 'Python', 'React', 'Django', 'PostgreSQL'],
+  direction: '-100vw'
 };
 
 export const londonParks = {
@@ -18,7 +19,8 @@ export const londonParks = {
   readme:
     'https://github.com/mbaxendale22/SEI-Project-3-London-Parks/blob/main/README.md',
   site: 'https://london-parks.herokuapp.com/',
-  tech: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB']
+  tech: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB'],
+  direction: '+100vw'
 };
 export const rickMortyVerse = {
   image: '/projects/connect_wallet.png',
@@ -28,7 +30,8 @@ export const rickMortyVerse = {
   readme:
     'https://github.com/mbaxendale22/buildspace-solana/blob/main/README.md',
   site: 'https://reverent-jepsen-7b8b5d.netlify.app/',
-  tech: ['JavaScript', 'React', 'Rust', 'Anchor', 'Web3.js']
+  tech: ['JavaScript', 'React', 'Rust', 'Anchor', 'Web3.js'],
+  direction: '-100vw'
 };
 export const mineSweeper = {
   image: '/projects/gameplay.png',
@@ -37,7 +40,8 @@ export const mineSweeper = {
     ' A minesweeper clone built to practice HTML, CSS, & JavaScript fundamentals. The game retains the main aspects of the original, three game modes, a score calculator, and a choice of music. The game is designed to look good as well as functioning correctly by containing CSS animations and transitions, and is mobile responsive.',
   readme: 'https://github.com/mbaxendale22/SEI-Project-1/blob/main/README.md',
   site: 'https://mbaxendale22.github.io/SEI-Project-1/',
-  tech: ['HTML', 'CSS', 'Vanilla Javascript']
+  tech: ['HTML', 'CSS', 'Vanilla Javascript'],
+  direction: '-100vw',
 };
 export const Kave = {
   image: '/projects/kave.png',
@@ -46,7 +50,8 @@ export const Kave = {
     'A full stack web app being built as a side project. The purpose of Kave.io is to allow users to search for coffees from local roasters based on the characteristics of the coffees themselves, rather than the branding of the roasters. Users can also curate a list of coffees they have tried, adding notes and recipe details',
   readme: 'https://github.com/mbaxendale22/kave-io-atlas',
   site: 'https://github.com/mbaxendale22/kave-io-atlas',
-  tech: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB']
+  tech: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB'],
+  direction: '0'
 };
 export const poddy = {
   image: '/projects/poddy-lp.png',
@@ -55,7 +60,8 @@ export const poddy = {
     'A pair-coded podcast recommendation app built in 48 hours using React and Listen Notes Podcast API. The app allows users to search for podcasts by genre, through filters, or be given a random podcast. Information is available for each podcast and users receive further recommendations via a show similar podcasts feature',
   readme: 'https://github.com/mbaxendale22/SEI-Project-2/blob/main/readme.md',
   site: 'https://frosty-shaw-45771e.netlify.app/',
-  tech: ['JavaScript', 'React', 'Bulma', 'Axios']
+  tech: ['JavaScript', 'React', 'Bulma', 'Axios'],
+  direction: '+100vw'
 };
 
 // NAV BAR CONTENT
