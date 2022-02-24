@@ -5,7 +5,7 @@ import Nav from '../components/Nav';
 import { AnimatePresence, motion } from 'framer-motion';
 import { home, code, contact, about } from '../helpers/propVariables';
 
-const skillsVariants: object = {
+const skillsVariants = {
   hidden: {
     opacity: 0,
     x: '+100vw',
