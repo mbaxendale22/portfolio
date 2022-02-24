@@ -48,11 +48,12 @@ export const Kave = {
   title: 'Kave.io',
   description:
     'A full stack web app being built as a side project. The purpose of Kave.io is to allow users to search for coffees from local roasters based on the characteristics of the coffees themselves, rather than the branding of the roasters. Users can also curate a list of coffees they have tried, adding notes and recipe details',
-  readme: 'http://kave-io-app.herokuapp.com/',
-  site: 'https://github.com/mbaxendale22/kave-io-atlas',
+  readme: 'https://github.com/mbaxendale22/kave-io-atlas',
+  site: 'http://kave-io-app.herokuapp.com/',
   tech: ['JavaScript', 'React', 'Node', 'Express', 'MongoDB'],
   direction: '0'
 };
+
 export const poddy = {
   image: '/projects/poddy-lp.png',
   title: 'Poddy',
